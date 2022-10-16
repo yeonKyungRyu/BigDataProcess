@@ -68,7 +68,7 @@ for row in ws:
 		sum_v = ws.cell(row = row_id, column = 3).value * 0.3
 		sum_v += ws.cell(row = row_id, column = 4).value * 0.35
 		sum_v += ws.cell(row = row_id, column = 5).value * 0.34
-		sum_v += ws.cell(row = row_id, column = 6).value * 0.01
+		sum_v += ws.cell(row = row_id, column = 6).value
 		ws.cell(row = row_id, column = 7).value = sum_v
 		if sum_v not in dict:
 			dict[sum_v] = 1
