@@ -10,10 +10,13 @@ with open(input_file, "rt") as f:
 		line = line.rstrip()
 		str_arr=line.split("::", )
 		#print(str_arr)
-		if str_arr[2] not in dic:
-			dic[str_arr[2]] = 1
-		else:
-			dic[str_arr[2]] += 1
+		genre_arr=str_arr[2].split("|")
+		#print(genre_arr)
+		for s in genre_arr:
+			if s not in dic:
+				dic[s] = 1
+			else:
+				dic[s] += 1
 
 itemlist = dic.items()
 with open(output_file, "wt") as f:
