@@ -1,6 +1,7 @@
 #! /usr/bin/python3
 import sys
 import datetime
+
 days=['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
 arr=[]
 input_file=sys.argv[1]
@@ -24,4 +25,4 @@ with open(input_file, "rt") as f:
 #print(arr)
 with open(output_file, "wt") as f:
 	for str in arr:
-		f.write(str+"\n")
+		f.write("%s\n" % (str))
