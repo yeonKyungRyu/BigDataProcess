@@ -14,12 +14,12 @@ with open(input_file, "rt") as f:
 		#print(str_arr)
 
 		number=str_arr[0]
-		vehicles=int(str_arr[2])
-		trips=int(str_arr[3])
+		vehicles=str_arr[2]
+		trips=str_arr[3]
 
 		date=str_arr[1].split("/")
 		week=days[datetime.date(int(date[2]), int(date[0]), int(date[1])).weekday()]
-		new_str= "%s,%s %d,%d" % (number, week, vehicles, trips)
+		new_str= "%s,%s %s,%s" % (number, week, vehicles, trips)
 		arr.append(new_str)
 
 #print(arr)
